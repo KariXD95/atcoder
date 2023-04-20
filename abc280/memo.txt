@@ -1,0 +1,50 @@
+N,X = map(int,input().split())
+N = int(input().split())
+a = list(map,input().split())
+a = [input() for _ in range()]
+
+from collections import defaultdict
+from collections import deque
+P = list(map(int,input().split()))
+math.factorial(5)
+
+import itertools 
+list(itertools.chain.from_iterable($List))  多次元リスト($List)を1次元に
+
+import sys
+sys.setrecursionlimit(10**6)  再帰回数上限
+
+組み合わせ
+import math
+def comb(n, r):
+    return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
+
+"""nを素因数分解"""
+"""2以上の整数n => [[素因数, 指数], ...]の2次元リスト"""
+
+def factorization(n):
+    arr = []
+    temp = n
+    for i in range(2, int(-(-n**0.5//1))+1):
+        if temp%i==0:
+            cnt=0
+            while temp%i==0:
+                cnt+=1
+                temp //= i
+            arr.append([i, cnt])
+
+    if temp!=1:
+        arr.append([temp, 1])
+
+    if arr==[]:
+        arr.append([n, 1])
+
+    return arr
+
+    ********dp*************
+    ・入れない場合の価値
+    dp[i][w] = dp[i-1][w]
+    ・入れる場合の価値
+    dp[i][w] = dp[i-1][w-wi]+vi 
+
+    #PyPyで提出するとよい
